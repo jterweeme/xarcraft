@@ -1,0 +1,9 @@
+Real Time Strategy spel op Warcraft 1
+
+Units: tank, soldiers, farmer
+Buildings: tankfabriek, barracks, command-center, tower
+Map: trees, goldmine, rivers
+Levels: verschillende maps met moeilijkere opponent
+
+
+
