@@ -519,15 +519,27 @@ MapObject
     <additional_attributes>30;30;30;100</additional_attributes>
   </element>
   <element>
-    <type>com.umlet.element.Interface</type>
+    <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>650</x>
-      <y>1070</y>
-      <w>200</w>
-      <h>90</h>
+      <x>800</x>
+      <y>850</y>
+      <w>270</w>
+      <h>50</h>
     </coordinates>
-    <panel_attributes>DrawableGameComponent
-</panel_attributes>
-    <additional_attributes/>
+    <panel_attributes>lt=&lt;()
+r1=DrawableGameComponent</panel_attributes>
+    <additional_attributes>30;30;250;30</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>1530</x>
+      <y>570</y>
+      <w>320</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;()
+r1=DrawableGameComponent</panel_attributes>
+    <additional_attributes>300;30;30;30</additional_attributes>
   </element>
 </diagram>
