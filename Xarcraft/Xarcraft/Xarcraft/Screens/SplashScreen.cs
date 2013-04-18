@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace Xarcraft
 {
@@ -8,7 +9,7 @@ namespace Xarcraft
     {
         SpriteFont font;
 
-        public SplashScreen(Game game)
+        public SplashScreen(Game1 game)
             : base(game)
         {
         }
@@ -26,6 +27,18 @@ namespace Xarcraft
             spriteBatch.Begin();
             spriteBatch.DrawString(font, "Hello world", new Vector2(20, 20), Color.Black);
             spriteBatch.End();
+        }
+
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+            KeyboardState keyboard = Keyboard.GetState();
+
+            if (keyboard.IsKeyDown(Keys.A))
+            {
+                Console.WriteLine("Debug bericht");
+                this.game.changeScreen(new MenuScreen(game));
+            }
         }
     }
 }

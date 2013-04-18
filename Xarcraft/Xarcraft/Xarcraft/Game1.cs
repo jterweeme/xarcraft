@@ -35,6 +35,13 @@ namespace Xarcraft
             
         }
 
+        public void changeScreen(Screen newScreen)
+        {
+            Components.Remove(currentScreen);
+            this.currentScreen = newScreen;
+            Components.Add(currentScreen);
+        }
+
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
