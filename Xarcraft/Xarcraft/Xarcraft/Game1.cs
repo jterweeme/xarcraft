@@ -13,6 +13,7 @@ namespace Xarcraft
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Screen currentScreen;
+        Cursor cursor;
 
         public Game1()
         {
@@ -24,8 +25,14 @@ namespace Xarcraft
         {
             
             currentScreen = new SplashScreen(this);
+            cursor = new Cursor(this);
             Components.Add(currentScreen);
+            Components.Add(cursor);
+            
+            
             base.Initialize();
+            
+            
         }
 
         protected override void LoadContent()
