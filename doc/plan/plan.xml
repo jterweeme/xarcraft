@@ -1,7 +1,11 @@
 <?xml version="1.0"?>
 <plan>
 <page>
-    <h1>Plan Xarcraft</h1>
+    <hgroup>
+        <h1>Plan Xarcraft</h1>
+        <h2>Malte Frerichs</h2>
+        <h2>Jasper ter Weeme</h2>
+    </hgroup>
     <h2>Real Time Strategy spel op Warcraft 1</h2>
     <dl>
         <dt>Units</dt>
@@ -13,10 +17,15 @@
         <dd>barracks</dd>
         <dd>command-center</dd>
         <dd>tower</dd>
-        <dd>Map: trees, goldmine, rivers</dd>
-        <dd>Levels: verschillende maps met moeilijkere opponent</dd>
+        <dt>Map</dt>
+        <dd>trees</dd>
+        <dd>goldmine</dd>
+        <dd>rivers</dd>
+        <dt>Levels</dt>
+        <dd>verschillende maps met moeilijkere opponent</dd>
     </dl>
     <figure>
+        <figcaption>Klassendiagram</figcaption>
         <img src="klassen.svg" alt=""/>
     </figure>
 </page>

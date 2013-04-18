@@ -22,29 +22,42 @@
     <xsl:template match="page">
         <fo:page-sequence master-reference="romp">
             <fo:flow flow-name="xsl-region-body">
-                <xsl:apply-templates select="figure|h1|h2|dl"/>
+                <xsl:apply-templates select="dl|figure|h1|h2|hgroup"/>
             </fo:flow>
         </fo:page-sequence>
     </xsl:template>
     <xsl:template match="figure">
-        <fo:block><xsl:apply-templates select="img"/></fo:block>
+        <xsl:apply-templates select="figcaption|img"/>
     </xsl:template>
     <xsl:template match="img">
+        <fo:block>
         <fo:external-graphic content-width="15cm">
             <xsl:attribute name="src">
                 <xsl:value-of select="@src"/>
             </xsl:attribute>
         </fo:external-graphic>
+        </fo:block>
     </xsl:template>
     <xsl:template match="dl">
         <xsl:apply-templates select="dd|dt"/>
     </xsl:template>
-    <xsl:template match="h2|dt|dd">
+    <xsl:template match="hgroup">
+        <xsl:apply-templates select="h1|h2"/>
+    </xsl:template>
+    <xsl:template match="dt|figcaption">
         <fo:block><xsl:value-of select="."/></fo:block>
     </xsl:template>
-    <xsl:template match="h1">
-        <fo:block font-size="16px"><xsl:value-of select="."/></fo:block>
+    <xsl:template match="dd">
+        <fo:block margin-left="20pt"><xsl:value-of select="."/></fo:block>
     </xsl:template>
+
+    <xsl:template match="h1">
+        <fo:block font-size="32px"><xsl:value-of select="."/></fo:block>
+    </xsl:template>
+    <xsl:template match="h2">
+        <fo:block font-size="24px"><xsl:value-of select="."/></fo:block>
+    </xsl:template>
+
 </xsl:stylesheet>
 
 
