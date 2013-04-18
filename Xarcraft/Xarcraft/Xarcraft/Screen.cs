@@ -15,10 +15,6 @@ namespace Xarcraft
             this.game = game;
         }
 
-        public override void Initialize()
-        {
-            base.Initialize();
-        }
 
         protected override void LoadContent()
         {

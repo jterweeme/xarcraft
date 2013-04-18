@@ -13,21 +13,12 @@ namespace Xarcraft
         {
         }
 
-        public override void Initialize()
-        {
-            base.Initialize();
-            font = game.Content.Load<SpriteFont>("Font");
-        }
-
         protected override void LoadContent()
         {
             base.LoadContent();
+            font = game.Content.Load<SpriteFont>("Font");
         }
 
-        public override void Update(GameTime gameTime)
-        {
-            base.Update(gameTime);
-        }
 
         public override void Draw(GameTime gameTime)
         {
