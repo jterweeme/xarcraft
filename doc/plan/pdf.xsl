@@ -44,9 +44,13 @@
     <xsl:template match="hgroup">
         <xsl:apply-templates select="h1|h2"/>
     </xsl:template>
-    <xsl:template match="dt|figcaption">
+    <xsl:template match="dt">
         <fo:block><xsl:value-of select="."/></fo:block>
     </xsl:template>
+    <xsl:template match="figcaption">
+        <fo:block margin-top="20pt"><xsl:value-of select="."/></fo:block>
+    </xsl:template>
+
     <xsl:template match="dd">
         <fo:block margin-left="20pt"><xsl:value-of select="."/></fo:block>
     </xsl:template>
