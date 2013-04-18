@@ -2,6 +2,20 @@
 <plan>
 <page>
     <h1>Plan Xarcraft</h1>
+    <h2>Real Time Strategy spel op Warcraft 1</h2>
+    <dl>
+        <dt>Units</dt>
+        <dd>tank</dd>
+        <dd>soldiers</dd>
+        <dd>farmer</dd>
+        <dt>Buildings</dt>
+        <dd>tankfabriek</dd>
+        <dd>barracks</dd>
+        <dd>command-center</dd>
+        <dd>tower</dd>
+        <dd>Map: trees, goldmine, rivers</dd>
+        <dd>Levels: verschillende maps met moeilijkere opponent</dd>
+    </dl>
     <figure>
         <img src="klassen.svg" alt=""/>
     </figure>
