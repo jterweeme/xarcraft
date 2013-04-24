@@ -19,9 +19,8 @@ namespace Xarcraft
         protected override void LoadContent()
         {
             base.LoadContent();
-            spriteBatch = new SpriteBatch(this.Game.GraphicsDevice);
+            spriteBatch = new SpriteBatch(GraphicsDevice);
         }
-
        
     }
 }

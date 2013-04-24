@@ -1,36 +1,33 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 
 namespace Xarcraft
 {
-    class SplashScreen : Screen
+    public class CreditScreen : Screen
     {
-        SpriteFont font;
-        Texture2D splash;
+        Texture2D texture;
+        Game1 game;
         int count = 0;
-        int maxCount = 20;
+        int maxCount = 200;
 
-        public SplashScreen(Game1 game)
+        public CreditScreen(Game1 game)
             : base(game)
         {
+            this.game = game;
         }
 
         protected override void LoadContent()
         {
             base.LoadContent();
-            font = game.Content.Load<SpriteFont>("Font");
-            splash = this.Game.Content.Load<Texture2D>("splashscreen");
+            
+            texture = this.game.Content.Load<Texture2D>("credits");
         }
-
 
         public override void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
             spriteBatch.Begin();
-            spriteBatch.DrawString(font, "Hello world", new Vector2(20, 20), Color.Black);
-            spriteBatch.Draw(splash, new Rectangle(0, 0, 1280, 800), Color.White);
+            spriteBatch.Draw(texture, new Rectangle(0, 0, 1280, 800), Color.White);
             spriteBatch.End();
         }
 

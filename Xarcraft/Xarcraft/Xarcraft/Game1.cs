@@ -23,7 +23,9 @@ namespace Xarcraft
 
         protected override void Initialize()
         {
-            
+            graphics.PreferredBackBufferWidth = 1280;
+            graphics.PreferredBackBufferHeight = 800;
+            graphics.ApplyChanges();
             currentScreen = new SplashScreen(this);
             cursor = new Cursor(this);
             Components.Add(currentScreen);
