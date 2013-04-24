@@ -29,6 +29,8 @@
         <figcaption>Klassendiagram</figcaption>
         <img src="klassen.svg" alt=""/>
     </figure>
+</page>
+<page>
 	<h2>Menu</h2>
 	<ul>
 		<li>New game</li>

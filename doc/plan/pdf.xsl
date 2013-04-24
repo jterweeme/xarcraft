@@ -22,7 +22,7 @@
     <xsl:template match="page">
         <fo:page-sequence master-reference="romp">
             <fo:flow flow-name="xsl-region-body">
-                <xsl:apply-templates select="dl|figure|h1|h2|hgroup"/>
+                <xsl:apply-templates select="dl|figure|h1|h2|hgroup|ul"/>
             </fo:flow>
         </fo:page-sequence>
     </xsl:template>
@@ -50,18 +50,21 @@
     <xsl:template match="figcaption">
         <fo:block margin-top="20pt"><xsl:value-of select="."/></fo:block>
     </xsl:template>
-
     <xsl:template match="dd">
         <fo:block margin-left="20pt"><xsl:value-of select="."/></fo:block>
     </xsl:template>
-
     <xsl:template match="h1">
         <fo:block font-size="32px"><xsl:value-of select="."/></fo:block>
     </xsl:template>
     <xsl:template match="h2">
         <fo:block font-size="24px"><xsl:value-of select="."/></fo:block>
     </xsl:template>
-
+    <xsl:template match="ul">
+        <xsl:apply-templates select="li"/>
+    </xsl:template>
+    <xsl:template match="li">
+        <fo:block><xsl:value-of select="."/></fo:block>
+    </xsl:template>
 </xsl:stylesheet>
 
 
