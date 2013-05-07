@@ -39,6 +39,7 @@ namespace Xarcraft
 
         public void changeScreen(Screen newScreen)
         {
+            currentScreen.Unload();
             Components.Remove(currentScreen);
             this.currentScreen = newScreen;
             Components.Add(currentScreen);

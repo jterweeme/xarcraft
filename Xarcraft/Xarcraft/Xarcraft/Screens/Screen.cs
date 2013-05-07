@@ -21,6 +21,11 @@ namespace Xarcraft
             base.LoadContent();
             spriteBatch = new SpriteBatch(GraphicsDevice);
         }
+
+        virtual public void Unload()
+        {
+        }
+
        
     }
 }

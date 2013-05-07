@@ -22,10 +22,18 @@ namespace Xarcraft
         {
             base.LoadContent();
             font = game.Content.Load<SpriteFont>("Font");
-            menuItems.Add(new MenuItem(game, "New Game", new Vector2(20, 60), new SplashScreen(game)));
+            menuItems.Add(new MenuItem(game, "New Game", new Vector2(20, 60), new GameScreen(game)));
             menuItems.Add(new MenuItem(game, "Credits", new Vector2(20, 80), new CreditScreen(game)));
-            menuItems.Add(new MenuItem(game, "Exit", new Vector2(20, 100)));
+            menuItems.Add(new MenuItem(game, "Exit", new Vector2(20, 100), new ExitScreen(game)));
             menuItems[0].select();
+        }
+
+        public override void Unload()
+        {
+            foreach (MenuItem menuItem in menuItems)
+            {
+                menuItem.Unload();
+            }
         }
 
         public override void Update(GameTime gameTime)

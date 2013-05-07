@@ -63,5 +63,10 @@ namespace Xarcraft
         {
             this.selected = false;
         }
+
+        public void Unload()
+        {
+            this.game.Components.Remove(this);
+        }
     }
 }

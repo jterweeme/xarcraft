@@ -3,13 +3,13 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Xarcraft
 {
-    public class CreditScreen : Screen
+    public class ExitScreen : Screen
     {
         Texture2D texture;
         int count = 0;
         int maxCount = 200;
 
-        public CreditScreen(Game1 game)
+        public ExitScreen(Game1 game)
             : base(game)
         {
             this.game = game;
@@ -18,7 +18,7 @@ namespace Xarcraft
         protected override void LoadContent()
         {
             base.LoadContent();
-            
+
             texture = this.game.Content.Load<Texture2D>("credits");
         }
 
@@ -35,7 +35,7 @@ namespace Xarcraft
             base.Update(gameTime);
 
             if (count++ > maxCount)
-                this.game.changeScreen(new MenuScreen(game));
+                game.Exit();
         }
     }
 }
