@@ -112,7 +112,9 @@
   <ItemGroup>
     <Compile Include="Camera.cs" />
     <Compile Include="Cursor.cs" />
+    <Compile Include="Map.cs" />
     <Compile Include="MenuItem.cs" />
+    <Compile Include="NatureObject.cs" />
     <Compile Include="Screens\CreditScreen.cs" />
     <Compile Include="Screens\ExitScreen.cs" />
     <Compile Include="Screens\GameScreen.cs" />
@@ -122,6 +124,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Screens\SplashScreen.cs" />
+    <Compile Include="Tree.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

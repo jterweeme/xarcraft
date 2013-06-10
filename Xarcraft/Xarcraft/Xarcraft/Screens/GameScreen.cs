@@ -4,25 +4,28 @@ namespace Xarcraft
 {
     public class GameScreen : Screen
     {
-        Camera camera;
+        public static Camera camera;
         SpriteFont font;
+        Map map;
 
         public GameScreen(Game1 game)
             : base(game)
         {
             this.game = game;
+            
         }
 
         public override void Initialize()
         {
             base.Initialize();
             camera = new Camera();
+            map = new Map(game); 
         }
 
         protected override void LoadContent()
         {
             base.LoadContent();
-            
+            //Game.Components.Add(map);
             font = game.Content.Load<SpriteFont>("Font");
         }
 
@@ -35,9 +38,7 @@ namespace Xarcraft
         public override void Draw(Microsoft.Xna.Framework.GameTime gameTime)
         {
             base.Draw(gameTime);
-            spriteBatch.Begin(SpriteSortMode.BackToFront, null, null, null, null, null, camera.GetMatrix());
-            spriteBatch.DrawString(font, "Bladiebla", new Vector2(100, 100), Color.Black);
-            spriteBatch.End();
+
         }
     }
 }

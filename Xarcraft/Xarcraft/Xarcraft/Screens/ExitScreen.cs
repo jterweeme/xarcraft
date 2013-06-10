@@ -19,7 +19,7 @@ namespace Xarcraft
         {
             base.LoadContent();
 
-            texture = this.game.Content.Load<Texture2D>("credits");
+            texture = Game.Content.Load<Texture2D>("credits");
         }
 
         public override void Draw(GameTime gameTime)

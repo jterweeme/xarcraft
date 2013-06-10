@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Xarcraft
 {
-    class Camera
+    public class Camera
     {
 
         private Vector2 position;
